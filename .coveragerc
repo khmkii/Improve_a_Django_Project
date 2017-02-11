@@ -1,0 +1,11 @@
+[run]
+omit =
+    menu/migrations*
+    mysite/settings.py
+    mysite/__init__.py
+    menu/__init__.py
+    menu/templatetags/__init__.py
+    menu/admin.py
+    menu/tests.py
+    manage.py
+    mysite/urls.py

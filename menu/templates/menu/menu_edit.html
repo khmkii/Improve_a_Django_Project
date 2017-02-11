@@ -1,0 +1,20 @@
+{% extends 'menu/layout.html' %}
+
+{% block content %}
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                {% if menu %}
+                    <h1>Edit Menu</h1>
+                {% else %}
+                    <h1>Create New Menu</h1>
+                {% endif %}
+                <form method="POST" class="menu-form">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="save btn btn-default">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
